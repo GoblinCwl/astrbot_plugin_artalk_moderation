@@ -1,0 +1,12 @@
+# AstrBot 与 Artalk 处于同一个 Docker network 时，替换 astrbot:6185 为 AstrBot
+# 容器名和其 WebUI 端口。先在 AstrBot Dashboard 创建带 plugin 权限的 API Key。
+# API Key 是该 Webhook 唯一的鉴权凭据，请使用 URL 安全字符，避免 %、#、& 等字符。
+moderator:
+  pending_default: true
+  api_fail_block: true
+
+admin_notify:
+  notify_pending: true
+  webhook:
+    enabled: true
+    url: "http://astrbot:6185/api/v1/plugins/extensions/astrbot_plugin_artalk_moderation/webhook?api_key=替换为AstrBot插件权限APIKey"
