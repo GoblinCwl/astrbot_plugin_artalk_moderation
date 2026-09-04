@@ -9,4 +9,4 @@ admin_notify:
   notify_pending: true
   webhook:
     enabled: true
-    url: "http://astrbot:6185/api/v1/plugins/extensions/astrbot_plugin_artalk_moderation/webhook?api_key=替换为AstrBot插件权限APIKey"
+    url: "http://astrbot:6185/api/v1/plugins/extensions/astrbot_plugin_artalk_comment_moderation/webhook?api_key=替换为AstrBot插件权限APIKey"

@@ -15,10 +15,10 @@ from astrbot.api.event import AstrMessageEvent, MessageChain, filter
 from astrbot.api.star import Context, Star, register
 from quart import jsonify, request
 
-PLUGIN_NAME = "astrbot_plugin_artalk_moderation"
+PLUGIN_NAME = "astrbot_plugin_artalk_comment_moderation"
 
 
-@register("astrbot_plugin_artalk_moderation", "Local", "Artalk 待审评论 LLM 审核", "0.1.0")
+@register("astrbot_plugin_artalk_comment_moderation", "Local", "Artalk 待审评论 LLM 审核", "1.0.3")
 class ArtalkModerationPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
