@@ -2,7 +2,7 @@ name: astrbot_plugin_artalk_moderation
 display_name: Artalk 评论审核
 short_desc: Artalk 评论审核
 desc: 接收 Artalk 内网 Webhook 并审核待审评论，使用 AstrBot 已配置的模型判定并通知管理员。
-version: 1.0.2
+version: 1.0.3
 author: GoblinCwl
 astrbot_version: ">=4.27.3,<5"
 support_platforms:
