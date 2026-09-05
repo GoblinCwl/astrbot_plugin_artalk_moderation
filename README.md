@@ -49,7 +49,7 @@ https://comments.example.com
 AstrBot Plugin Web API 的路径为：
 
 ```text
-http(s)://<AstrBot可访问地址>:<端口>/api/v1/plugins/extensions/astrbot_plugin_artalk_comment_moderation/webhook?api_key=你的AstrBot插件权限APIKey
+http(s)://<AstrBot可访问地址>:<端口>/api/v1/plugins/extensions/astrbot_plugin_artalk_moderation/webhook?api_key=你的AstrBot插件权限APIKey
 ```
 
 `<AstrBot可访问地址>:<端口>` 必须从 Artalk 的运行环境可访问：同机部署可使用回环地址或本机网络地址，跨主机部署可使用受保护的域名/IP，Docker 同网络部署则可使用 `astrbot:6185`。`api_key` 应是具有插件权限的 AstrBot API Key；如果 Key 含有 URL 保留字符，必须先进行 URL 编码。不要使用包含未编码 `%`、`#`、`&` 等字符的 URL。
@@ -64,7 +64,7 @@ admin_notify:
   notify_pending: true
   webhook:
     enabled: true
-    url: "http://<AstrBot可访问地址>:<端口>/api/v1/plugins/extensions/astrbot_plugin_artalk_comment_moderation/webhook?api_key=替换为插件权限APIKey"
+    url: "http://<AstrBot可访问地址>:<端口>/api/v1/plugins/extensions/astrbot_plugin_artalk_moderation/webhook?api_key=替换为插件权限APIKey"
 ```
 
 Webhook 只负责通知插件；插件会重新从 Artalk API 获取评论原文，不信任 Webhook Body 中的评论内容。
